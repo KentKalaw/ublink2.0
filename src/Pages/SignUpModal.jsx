@@ -9,6 +9,7 @@ function SignUpModal({ show, handleClose, handleShowSignInModal}) {
 
     const departments = ['Select Department','Computer Science', 'Mathematics', 'Physics', 'Chemistry', 'CICT'];
     const courses = ['Select course','BSc', 'MSc', 'PhD', 'BSIT', 'BSIS', 'BSCS'];
+    
 
 
   return (
@@ -20,27 +21,27 @@ function SignUpModal({ show, handleClose, handleShowSignInModal}) {
         <form>
           <div className="row">
             <div className="col-md-6 mb-3">
-              <label htmlFor="firstName" className="form-label">Enter First Name</label>
+              <label htmlFor="firstName" className="form-label">First Name</label>
               <input type="text" className="form-control" id="firstName" />
             </div>
             <div className="col-md-6 mb-3">
-              <label htmlFor="lastName" className="form-label">Enter Last Name</label>
+              <label htmlFor="lastName" className="form-label">Last Name</label>
               <input type="text" className="form-control" id="lastName" />
             </div>
             <div className="col-md-6 mb-3">
-              <label htmlFor="email" className="form-label">Enter Email Address</label>
+              <label htmlFor="email" className="form-label">Email Address</label>
               <input type="email" className="form-control" id="email" />
             </div>
             <div className="col-md-6 mb-3">
-              <label htmlFor="mobileNo" className="form-label">Enter Mobile Number</label>
+              <label htmlFor="mobileNo" className="form-label">Mobile Number</label>
               <input type="tel" className="form-control" id="mobileNo" />
             </div>
             <div className="col-md-6 mb-3">
-              <label htmlFor="address" className="form-label">Enter Address</label>
+              <label htmlFor="address" className="form-label">Address</label>
               <input type="text" className="form-control" id="address" />
             </div>
             <div className="col-md-6 mb-3">
-              <label htmlFor="yearGrad" className="form-label">Enter Year Graduated</label>
+              <label htmlFor="yearGrad" className="form-label">Year Graduated</label>
               <input type="number" className="form-control" id="yearGrad" min="1900" max={new Date().getFullYear()} />
             </div>
             <div className="col-md-6 mb-3">
@@ -69,7 +70,7 @@ function SignUpModal({ show, handleClose, handleShowSignInModal}) {
             </div>
           </div>
           <div className="d-flex flex-column align-items-center">
-            <button type="submit" className="btn btn-primary w-50 mb-3">
+            <button type="submit" className="btn btn-dark w-50 mb-3">
               Sign Up
             </button>
             <span className="text-muted">
