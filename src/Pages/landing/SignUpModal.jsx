@@ -7,8 +7,8 @@ function SignUpModal({ show, handleClose, handleShowSignInModal}) {
         handleShowSignInModal(); // Show the sign-up modal
       };
 
-    const departments = ['Select Department','Computer Science', 'Mathematics', 'Physics', 'Chemistry', 'CICT'];
-    const courses = ['Select course','BSc', 'MSc', 'PhD', 'BSIT', 'BSIS', 'BSCS'];
+    const departments = ['Computer Science', 'Mathematics', 'Physics', 'Chemistry', 'CICT'];
+    const courses = ['BSc', 'MSc', 'PhD', 'BSIT', 'BSIS', 'BSCS'];
     
 
 
@@ -46,7 +46,8 @@ function SignUpModal({ show, handleClose, handleShowSignInModal}) {
             </div>
             <div className="col-md-6 mb-3">
               <label htmlFor="department" className="form-label">Select Department</label>
-              <select className="form-control" id="department">
+              <select className="form-control" id="department" defaultValue="">
+              <option value="" disabled>-- Select Department --</option>
                 {departments.map(department => (
                   <option key={department} value={department}>{department}</option>
                 ))}
@@ -54,7 +55,8 @@ function SignUpModal({ show, handleClose, handleShowSignInModal}) {
             </div>
             <div className="col-md-6 mb-3">
               <label htmlFor="course" className="form-label">Select Course</label>
-              <select className="form-control" id="course">
+              <select className="form-control" id="course" defaultValue="">
+              <option value="" disabled>-- Select Course --</option>
                 {courses.map(course => (
                   <option key={course} value={course}>{course}</option>
                 ))}

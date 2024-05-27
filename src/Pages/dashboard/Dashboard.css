@@ -1,0 +1,14 @@
+.dashboard {
+    display: flex;
+    background-color: #1E1E1E
+    
+  }
+  
+  .main-content {
+    margin-left: 280px; 
+    padding: 20px;
+    background-color: #1E1E1E;
+    min-height: 100vh;
+    color: #fff;
+  }
+  

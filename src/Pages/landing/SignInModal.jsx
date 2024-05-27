@@ -22,7 +22,7 @@ function SignInModal({ show, handleClose, handleShowSignUpModal}) {
   };
 
   React.useEffect(()=> {
-    if(localStorage.getItem('auth')) navigate('/Dashboard')
+    if(localStorage.getItem('auth')) navigate('/dashboard')
   })
 
   const handleSubmit = (event) => {
@@ -30,7 +30,7 @@ function SignInModal({ show, handleClose, handleShowSignUpModal}) {
     if (username === 'lunceus' && password === 'kazuya') {
       alert('Login successful');
       handleClose(); 
-      navigate('/Dashboard');
+      navigate('/dashboard');
       localStorage.setItem('auth', true);
   
     } else {

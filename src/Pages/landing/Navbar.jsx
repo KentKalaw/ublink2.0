@@ -1,19 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import './Navbar.css';
-import logoImg from '../images/ublink2logo.png';
+import logoImg from './landing-images/ublink2logo.png'
 import SignInModal from './SignInModal';
 import SignUpModal from './SignUpModal';
 
 function Navbar() {
-    const [showSidebar, setShowSidebar] = useState(false);
+    const [showNavsidebar, setShowNavsidebar] = useState(false);
 
-    
     const [showSignInModal, setShowSignInModal] = useState(false);
     const [showSignUpModal, setShowSignUpModal] = useState(false);
 
-    function toggleSidebar() {
-        setShowSidebar(!showSidebar); 
+    function toggleNavsidebar() {
+        setShowNavsidebar(!showNavsidebar); 
     }
 
     const handleShowSignInModal = () => setShowSignInModal(true);
@@ -29,20 +28,20 @@ function Navbar() {
                     <img src={logoImg} alt="UBLink 2.0 Logo" />
                 </a>
 
-                <button className="navbar-toggler shadow-none border-0" type="button" onClick={toggleSidebar}>
+                <button className="navbar-toggler shadow-none border-0" type="button" onClick={toggleNavsidebar}>
                     <span className='navbar-toggler-icon'></span>
                 </button>
 
-                <div className={`sidebar offcanvas offcanvas-start ${showSidebar ? 'show' : ''}`} tabIndex='-1' id='offcanvasNavbar' aria-labelledby='offcanvasNavbarLabel'>
+                <div className={`navsidebar offcanvas offcanvas-start ${showNavsidebar ? 'show' : ''}`} tabIndex='-1' id='offcanvasNavbar' aria-labelledby='offcanvasNavbarLabel'>
                     <div className="offcanvas-header text-white">
                         <img src={logoImg} alt="UBLink 2.0" />
-                        <button className='btn-close btn-close-black shadow-none' onClick={toggleSidebar} aria-label="Close"></button>
+                        <button className='btn-close btn-close-black shadow-none' onClick={toggleNavsidebar} aria-label="Close"></button>
                     </div>
 
                     <div className='offcanvas-body d-flex flex-column flex-lg-row p-4'>
                         <ul className='navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3'>
                             <li className='nav-item mx-2'>
-                                <a className='nav-link active' aria-current="page" href='#home'>Home</a>
+                                <a className='nav-link' aria-current="page" href='#home'>Home</a>
                             </li>
                             <li className='nav-item mx-2'>
                                 <a className='nav-link' href='#about'>About</a>
