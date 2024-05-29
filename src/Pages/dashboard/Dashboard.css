@@ -109,6 +109,7 @@
   .profile-section .logout-dashboard {
     display: flex;
     align-items: center;
+    color: #FF4500;
     margin-left: 15px;
     font-size: 1.35rem;
     cursor: pointer; 
@@ -116,7 +117,7 @@
   }
 
   .profile-section .logout-dashboard:hover {
-    color: #FF4500; 
+    color: #7c0a00; 
   }
 
   .alumni-spotlight {
