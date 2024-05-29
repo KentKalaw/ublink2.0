@@ -14,6 +14,7 @@ import InitiativeProgram from './Pages/dashboard/Pages/InitiativeProgram';
 import GTS from './Pages/dashboard/Pages/Gts';
 import SignInModal from './Pages/landing/SignInModal';
 import Dashboard from './Pages/dashboard/Dashboard';
+import Admin from './Pages/admin/Admin';
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,7 @@ function App() {
           <Route path="initiative-program" element={<InitiativeProgram />} />
           <Route path="gts" element={<GTS />} />
           </Route>
+      <Route path="/admin" element={<Admin/>}></Route>
     </Routes>
     
     </div>

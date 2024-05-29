@@ -33,6 +33,12 @@ function SignInModal({ show, handleClose, handleShowSignUpModal}) {
       navigate('/dashboard');
       localStorage.setItem('auth', true);
   
+    } else if (username === 'admin' && password === 'notanadmin') {
+      alert('Admin Login successful');
+      handleClose(); 
+      navigate('/admin');
+      localStorage.setItem('admin-auth', true);
+
     } else {
       setError('Invalid username or password');
     }
