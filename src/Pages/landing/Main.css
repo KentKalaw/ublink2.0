@@ -1,0 +1,27 @@
+/* Main.css */
+.main {
+  background-image: url('./landing-images/ubbc-pic-1.png');
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+  @media (max-width: 768px) {
+    .main {
+        padding: 10px; 
+    }
+
+    .main h1 {
+        font-size: 1.5rem;
+    }
+
+    .main p {
+        font-size: 1rem;
+    }
+}

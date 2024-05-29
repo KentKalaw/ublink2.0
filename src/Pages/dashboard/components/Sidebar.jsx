@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css'; 
 
 function Sidebar({ logoutHandler }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className="sidebar">
-      <div className="sidebar-content">
-        <h2 className="sidebar-title">Dashboard</h2>
-        <ul className="nav flex-column">
+    <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
+    <div className="sidebar-content">
+      <h2 className="sidebar-title">Dashboard</h2>
+      <button className="sidebar-toggle" onClick={toggleSidebar}>
+        <i className="bi bi-list"></i>
+      </button>
+      <ul className="nav flex-column">
           <li className="nav-item">
             <NavLink className="nav-link" to="/dashboard">
               <i className="bi bi-house-door-fill"></i> Home
@@ -15,7 +24,7 @@ function Sidebar({ logoutHandler }) {
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/dashboard/profile">
-              <i className="bi bi-mortarboard-fill"></i> Profile
+              <i className="bi bi-person-circle"></i> Profile
             </NavLink>
           </li>
           <li className="nav-item">
@@ -25,7 +34,7 @@ function Sidebar({ logoutHandler }) {
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/dashboard/yearbooks">
-              <i className="bi bi-journal-bookmark-fill"></i> Yearbooks
+              <i className="bi bi-mortarboard-fill"></i> Yearbooks
             </NavLink>
           </li>
           <li className="nav-item">
@@ -43,11 +52,7 @@ function Sidebar({ logoutHandler }) {
               <i className="bi bi-file-earmark-fill"></i> GTS
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/" onClick={logoutHandler}>
-              <i className="bi bi-box-arrow-right"></i> Logout
-            </NavLink>
-          </li>
+          
         </ul>
       </div>
     </nav>

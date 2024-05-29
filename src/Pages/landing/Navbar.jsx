@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import './Navbar.css';
-import logoImg from './landing-images/ublink2logo.png'
+import logoImg from './landing-images/ublink2-logo-white.png';
 import SignInModal from './SignInModal';
 import SignUpModal from './SignUpModal';
 
