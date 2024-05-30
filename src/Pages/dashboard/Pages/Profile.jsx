@@ -87,7 +87,7 @@ function Profile() {
             </div>
             <div className="info-row">
               <span className="info-label">Role:</span>
-              <span className="info-value">User</span>
+              <span className="info-value">Alumni</span>
             </div>
             <div className="info-row">
               <span className="info-label">Email:</span>
