@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
+
 import './Dashboard.css';
 import ExampleCarouselImage from './Pages/carousel/aespaArmageddon.jpg';
 import ExampleCarouselImage2 from './images/jennie.jpg';
@@ -8,12 +9,15 @@ import ExampleCarouselImage3 from './images/karina.jpg';
 import ExampleCarouselImage4 from './images/winter.jpg';
 import Carousel from 'react-bootstrap/Carousel';
 import ProfilePic from './images/pfp-test.png';
+import Post from './Pages/Post';
+
 
 
 function Dashboard() {
   const navigate = useNavigate();
   const [logout, setLogout] = React.useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
 
   React.useEffect(() => {
     if (!localStorage.getItem('auth')) navigate('/'); // eslint-disable-next-line
@@ -36,6 +40,7 @@ function Dashboard() {
 
 
   const userName = "Kent Francis Kalaw";
+
   
 
   return (
@@ -105,7 +110,7 @@ function Dashboard() {
       </Carousel>
       </div>
       <div className="post-container">
-      <h3>Post</h3>
+      <Post userName={userName} profilePic={ProfilePic} />
       </div>
       <Sidebar isOpen={isSidebarOpen} />
       <div className="main-content">
