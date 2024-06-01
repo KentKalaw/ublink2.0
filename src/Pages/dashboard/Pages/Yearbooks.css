@@ -1,0 +1,93 @@
+.yearbooks-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .yearbooks-container h1 {
+    text-align: center;
+  }
+  
+  .yearbooks-container h2 {
+    margin-top: 20px;
+  }
+  
+  .yearbooks-container button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .yearbooks-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .yearbooks-container form {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .yearbooks-container input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .yearbooks-container button[type="submit"] {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .yearbooks-container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  .digital-yearbooks-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Adjusted to 6 columns */
+    grid-auto-rows: auto;
+    gap: 20px;
+    justify-content: center; /* Center the grid horizontally */
+  }
+  
+  .yearbook-entry {
+    background-color: #333333;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center; 
+  }
+
+  .yearbook-entry img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+  }
+  
+  .yearbook-entry h3 {
+    margin-bottom: 3px;
+    font-size: 0.9em; 
+  }
+  
+  .yearbook-entry p {
+    margin: 3px 0;
+    font-size: 0.8em; 
+  }

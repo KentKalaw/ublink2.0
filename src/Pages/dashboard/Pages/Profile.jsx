@@ -110,8 +110,8 @@ function Profile() {
               <span className="info-value">2025</span>
             </div>
             <div className="info-row">
-              <span className="info-label">Status:</span>
-              <span className="info-value active">Active</span>
+              <span className="info-label">Yearbook Subscription Status:</span>
+              <span className="info-value active">Subscribed</span>
             </div>
             </div>
           )}
