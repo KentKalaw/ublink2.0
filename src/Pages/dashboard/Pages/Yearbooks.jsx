@@ -10,6 +10,7 @@ function Yearbooks() {
   const [logout, setLogout] = useState(false);
   const [deliveryOption, setDeliveryOption] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [showOptions, setShowOptions] = useState(true);
 
   // Redirect to login if not authenticated
   React.useEffect(() => {
@@ -19,6 +20,7 @@ function Yearbooks() {
   // Function to handle choosing delivery option
   const handleDeliveryOption = (option) => {
     setDeliveryOption(option);
+    setShowOptions(false);
   };
 
   const handleSubscription = () => {
@@ -26,8 +28,12 @@ function Yearbooks() {
   };
 
   const handleSubmitDeliveryInfo = () => {
-
     navigate('/dashboard/delivery-confirmation');
+  };
+
+  const handleGoBack = () => {
+    setDeliveryOption('');
+    setShowOptions(true);
   };
 
   return (
@@ -40,121 +46,129 @@ function Yearbooks() {
         </div>
       ) : (
         <div>
-          <button onClick={() => handleDeliveryOption('digital')}>Digital Yearbooks</button>
-          <button onClick={() => handleDeliveryOption('physical')}>Physical Yearbooks</button>
+          {showOptions ? (
+            <div className="center-buttons">
+              <button onClick={() => handleDeliveryOption('digital')}>Digital Yearbooks</button>
+              <button onClick={() => handleDeliveryOption('physical')}>Physical Yearbooks</button>
+            </div>
+          ) : (
+            <button className="top-buttons" onClick={handleGoBack}>Go Back</button>
+          )}
         </div>
       )}
       {deliveryOption === 'digital' && subscribed && (
-       <div className="digital-yearbooks-container">
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Bang Yunha</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Bang Yunha</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Bang Yunha</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Bang Yunha</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Jane Smith</h3>
-         <p>Bang Yunha</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Bang Yunha</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-       <div className="yearbook-entry">
-         <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
-         <h3>Fujiyoshi Kotoko</h3>
-         <p>Information Technology</p>
-         <p>2024</p>
-       </div>
-     </div>
+        <div className="digital-yearbooks-wrapper">
+          <div className="digital-yearbooks-container">
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Bang Yunha</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Bang Yunha</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Bang Yunha</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Jane Smith</h3>
+              <p>Bang Yunha</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Bang Yunha</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage2} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Bang Yunha</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+            <div className="yearbook-entry">
+              <img src={yearbookImage1} alt="Profile" className="yearbook-profile-pic" />
+              <h3>Fujiyoshi Kotoko</h3>
+              <p>Information Technology</p>
+              <p>2024</p>
+            </div>
+          </div>
+        </div>
       )}
       {deliveryOption === 'physical' && subscribed && (
         <div>

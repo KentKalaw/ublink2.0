@@ -11,7 +11,7 @@ function AlumniID() {
   }, [logout, navigate]);
 
   return (
-    <div>AlumniID</div>
+    <div>Alumni Privilege Card</div>
   )
 }
 
