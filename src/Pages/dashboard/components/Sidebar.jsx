@@ -39,7 +39,7 @@ function Sidebar({ logoutHandler }) {
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/dashboard/alumni-id">
-              <i className="bi bi-file-person-fill"></i> ID reApplication
+              <i className="bi bi-file-person-fill"></i> Alumni Privilege Card
             </NavLink>
           </li>
           <li className="nav-item">

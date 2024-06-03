@@ -1,0 +1,71 @@
+.gts-container {
+    max-width: 100%; /* Increased max-width */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #fff;
+  }
+  
+  .gts-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .gts-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .gts-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .gts-input {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 15px;
+  }
+  
+  .gts-input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .gts-input input[type="text"],
+  .gts-input input[type="email"],
+  .gts-input input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .gts-input input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .gts-input div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .gts-submit {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .gts-submit:hover {
+    background-color: #0056b3;
+  }
+  

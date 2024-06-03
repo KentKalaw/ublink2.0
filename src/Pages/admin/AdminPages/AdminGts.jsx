@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Gts.css';
+import './AdminGts.css';
 
-function Gts() {
-  const navigate = useNavigate();
-  // eslint-disable-next-line
-  const [logout, setLogout] = React.useState(false);
-
-  React.useEffect(() => {
-    if (!localStorage.getItem('auth')) navigate('/');
-  }, [logout, navigate]);
-
+function AdminGts() {
+  const [name, setNameStatus] = useState('');
+  const [department, setDepartmentStatus] = useState('');
+  const [course, setCourseStatus] = useState('');
   const [permanentAddress, setPermanentAddress] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [contactNumber, setContactNumber] = useState('');
@@ -23,104 +17,96 @@ function Gts() {
   const [otherQualification, setOtherQualification] = useState('');
   const [presentlyEmployed, setPresentlyEmployed] = useState('');
   const [employmentStatus, setEmploymentStatus] = useState('');
-  const [name, setNameStatus] = useState('');
-  const [department, setDepartmentStatus] = useState('');
-  const [course, setCourseStatus] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted successfully!');
-  };
+  
 
   return (
-    <div className="gts-container">
-      <h2 className="gts-title">Graduate Tracer Survey</h2>
-      <form onSubmit={handleSubmit} className="gts-form">
-      <div className="gts-row">
-          <div className="gts-input">
+    <div className="admin-gts-container">
+      <h2 className="admin-gts-title">Graduate Tracer Survey</h2>
+      <form className="admin-gts-form">
+        <div className="admin-gts-row">
+          <div className="admin-gts-input">
             <label>
               Name:
-              <input type="text" value={name} onChange={(e) => setNameStatus(e.target.value)} required />
+              <input type="text" value={name} placeholder='Kent Francis Kalaw' onChange={(e) => setNameStatus(e.target.value)} required />
             </label>
           </div>
-          <div className="gts-input">
+          <div className="admin-gts-input">
             <label>
               Department:
-              <input type="email" value={department} onChange={(e) => setDepartmentStatus(e.target.value)} required />
+              <input type="text" value={department} placeholder='CICT' onChange={(e) => setDepartmentStatus(e.target.value)} required />
             </label>
           </div>
-          <div className="gts-input">
+          <div className="admin-gts-input">
             <label>
               Course:
-              <input type="text" value={course} onChange={(e) => setCourseStatus(e.target.value)} required />
+              <input type="text" value={course} placeholder='Bachelor of Science in Information Technology' onChange={(e) => setCourseStatus(e.target.value)} required />
             </label>
           </div>
         </div>
-        <div className="gts-row">
-          <div className="gts-input">
+        <div className="admin-gts-row">
+          <div className="admin-gts-input">
             <label>
               Permanent Address:
-              <input type="text" value={permanentAddress} onChange={(e) => setPermanentAddress(e.target.value)} required />
+              <input type="text" value={permanentAddress} placeholder='Kumintang Ilaya, Batangas City' onChange={(e) => setPermanentAddress(e.target.value)} required />
             </label>
           </div>
-          <div className="gts-input">
+          <div className="admin-gts-input">
             <label>
               Email Address:
-              <input type="email" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value)} required />
+              <input type="email" value={emailAddress} placeholder='kentfranciskalaw@gmail.com' onChange={(e) => setEmailAddress(e.target.value)} required />
             </label>
           </div>
-          <div className="gts-input">
+          <div className="admin-gts-input">
             <label>
               Contact Number:
-              <input type="text" value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} required />
+              <input type="text" value={contactNumber} placeholder='091234567891' onChange={(e) => setContactNumber(e.target.value)} required />
             </label>
           </div>
         </div>
-        <div className="gts-row">
-          <div className="gts-input">
+        <div className="admin-gts-row">
+          <div className="admin-gts-input">
             <label>
               Civil Status:
-              <input type="text" value={civilStatus} onChange={(e) => setCivilStatus(e.target.value)} required />
+              <input type="text" value={civilStatus} placeholder='N/A' onChange={(e) => setCivilStatus(e.target.value)} required />
             </label>
           </div>
-        </div>
-        <div className="gts-row">
-          <div className="gts-input">
+          <div className="admin-gts-input">
             <label>
               Birthday:
               <input type="date" value={birthday} onChange={(e) => setBirthday(e.target.value)} required />
             </label>
           </div>
-          <div className="gts-input">
+        </div>
+        <div className="admin-gts-row">
+          <div className="admin-gts-input">
             <label>
               Degree & Specialization:
-              <input type="text" value={degree} onChange={(e) => setDegree(e.target.value)} required />
+              <input type="text" value={degree} placeholder='N/A' onChange={(e) => setDegree(e.target.value)} required />
             </label>
           </div>
-        </div>
-        <div className="gts-row">
-          <div className="gts-input">
+          <div className="admin-gts-input">
             <label>
               Year Graduated:
-              <input type="text" value={yearGraduated} onChange={(e) => setYearGraduated(e.target.value)} required />
+              <input type="text" value={yearGraduated} placeholder='N/A' onChange={(e) => setYearGraduated(e.target.value)} required />
             </label>
           </div>
-          <div className="gts-input">
+        </div>
+        <div className="admin-gts-row">
+          <div className="admin-gts-input">
             <label>
               Honors and Awards Received:
-              <input type="text" value={honors} onChange={(e) => setHonors(e.target.value)} required />
+              <input type="text" value={honors} placeholder='N/A' onChange={(e) => setHonors(e.target.value)} required />
             </label>
           </div>
-        </div>
-        <div className="gts-row">
-          <div className="gts-input">
+          <div className="admin-gts-input">
             <label>
               Professional Examinations Passed:
-              <input type="text" value={professionalExams} onChange={(e) => setProfessionalExams(e.target.value)} required />
+              <input type="text" value={professionalExams} placeholder='N/A' onChange={(e) => setProfessionalExams(e.target.value)} required />
             </label>
           </div>
         </div>
-        <div className="gts-input">
+        <div className="admin-gts-input">
           <label>
             Did you possess other tertiary level qualification/advance studies?
             <div>
@@ -135,7 +121,7 @@ function Gts() {
             </div>
           </label>
         </div>
-        <div className="gts-input">
+        <div className="admin-gts-input">
           <label>
             Are you presently employed?
             <div>
@@ -154,7 +140,7 @@ function Gts() {
             </div>
           </label>
         </div>
-        <div className="gts-input">
+        <div className="admin-gts-input">
           <label>
             Present Employment Status:
             <div>
@@ -181,10 +167,9 @@ function Gts() {
             </div>
           </label>
         </div>
-        <button type="submit" className="gts-submit">Submit</button>
       </form>
     </div>
   );
 }
 
-export default Gts;
+export default AdminGts;

@@ -1,0 +1,59 @@
+.alumni-form-container {
+    max-width: 700px;
+    max-height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+  }
+  
+  .alumni-form-container h2 {
+    text-align: center;
+  }
+  
+  .alumni-form-container form {
+    margin-top: 20px;
+  }
+  
+  .alumni-form-container form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .alumni-form-container form input[type="text"],
+  .alumni-form-container form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .alumni-form-container form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .alumni-form-container form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .alumni-form-container .terms {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .alumni-form-container .terms label {
+    margin-bottom: 0;
+    margin-left: 5px; /* Adjust the spacing between the checkbox and the label */
+    color: #fff; /* Optional: change the color of the text */
+  }
+  

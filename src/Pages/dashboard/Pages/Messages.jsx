@@ -102,9 +102,7 @@ function Messages() {
           ))}
         </div>
         <div className="chat-input">
-        <i class="bi bi-image-fill"></i> 
-        <i class="bi bi-camera-fill"></i>
-        <i class="bi bi-mic-fill"></i>
+        <i class="bi bi-plus-lg"></i>
           <input
             type="text"
             placeholder="Type a message..."

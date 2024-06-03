@@ -1,0 +1,178 @@
+.admin-record-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #3f3f3f;
+    padding: 20px;
+}
+
+.admin-record-table {
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    width: 100%;
+}
+
+.admin-record-table h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.admin-record-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-record-table th, .admin-record-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #fff;
+}
+
+.admin-record-table th {
+    background-color: #333;
+}
+
+.admin-record-table tbody tr:nth-child(even) {
+    background-color: #333;
+}
+
+.admin-record-table tbody tr:nth-child(odd) {
+    background-color: #444;
+}
+
+.admin-record-table tbody tr td:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.admin-record-table .approval-accept-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2fd84b;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.admin-record-table .approval-accept-button:hover{
+    background-color: #1d8a2f;
+}
+
+.admin-record-table .approval-decline-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f32f16;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.admin-record-table .approval-decline-button:hover{
+    background-color: #881c0d;
+}
+
+.admin-record-table .yearbook-waiting-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d47f1e;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+.admin-record-table .yearbook-waiting-button:hover {
+    background-color: #855013;
+}
+
+.admin-record-table .yearbook-subbed-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #20da19;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.admin-record-table .yearbook-subbed-button:hover {
+    background-color: #13830f;
+}
+
+.admin-record-table .yearbook-decline-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f32f16;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.admin-record-table .yearbook-decline-button:hover {
+    background-color: #911e0f;
+}
+
+.admin-record-table .privilege-waiting-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d47f1e;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+.admin-record-table .privilege-waiting-button:hover {
+    background-color: #855013;
+}
+
+.admin-record-table .privilege-accept-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #20da19;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.admin-record-table .privilege-accept-button:hover {
+    background-color: #13830f;
+}
+
+.admin-record-table .privilege-decline-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f32f16;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.admin-record-table .privilege-decline-button:hover {
+    background-color: #911e0f;
+}
+
+
+

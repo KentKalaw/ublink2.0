@@ -1,0 +1,65 @@
+.manage-alumni-container {
+    max-width: 900px;
+    max-height: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #242424;
+    color: #ffffff;
+  }
+
+  .manage-alumni-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .manage-alumni-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+   .manage-alumni-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+
+  .manage-alumni-input {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 15px;
+  }
+
+  .manage-alumni-input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .manage-alumni-input input[type="text"],
+.manage-alumni-input input[type="file"],
+.manage-alumni-input textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.manage-alumni-submit {
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all ease 0.5s;
+  }
+
+
+.manage-alumni-submit:hover {
+    background-color: #0056b3;
+}

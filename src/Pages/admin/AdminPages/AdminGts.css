@@ -1,0 +1,58 @@
+.admin-gts-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  .admin-gts-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-gts-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-gts-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .admin-gts-input {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 15px;
+  }
+  
+  .admin-gts-input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .admin-gts-input input[type="text"],
+  .admin-gts-input input[type="email"],
+  .admin-gts-input input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .admin-gts-input input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .admin-gts-input div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+
+  
